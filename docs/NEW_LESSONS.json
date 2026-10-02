@@ -1,0 +1,50 @@
+[
+  {
+    "path": "notebooks/02_modeling_workflow/01_preprocessing_and_pipelines.ipynb",
+    "title": "Preprocessing and leakage-safe pipelines",
+    "runtime": "base",
+    "dataset": "Generated mixed-type tabular data"
+  },
+  {
+    "path": "notebooks/02_modeling_workflow/02_metrics_and_cross_validation.ipynb",
+    "title": "Classification metrics and cross-validation",
+    "runtime": "base",
+    "dataset": "Generated imbalanced binary classification"
+  },
+  {
+    "path": "notebooks/03_classical_models/01_knn_and_svm_classification.ipynb",
+    "title": "K-nearest neighbors and SVM classification",
+    "runtime": "base",
+    "dataset": "Built-in Iris dataset"
+  },
+  {
+    "path": "notebooks/03_classical_models/02_decision_trees_and_ensembles.ipynb",
+    "title": "Decision trees, random forests, and boosting",
+    "runtime": "base",
+    "dataset": "Built-in Wine dataset"
+  },
+  {
+    "path": "notebooks/03_classical_models/03_text_classification_naive_bayes.ipynb",
+    "title": "Text classification with TF-IDF and Naive Bayes",
+    "runtime": "base",
+    "dataset": "Handcrafted weather/sports teaching sentences"
+  },
+  {
+    "path": "notebooks/04_unsupervised_learning/01_clustering_kmeans_dbscan.ipynb",
+    "title": "Clustering with K-means and DBSCAN",
+    "runtime": "base",
+    "dataset": "Generated blobs and curved clusters"
+  },
+  {
+    "path": "notebooks/04_unsupervised_learning/02_pca_and_dimensionality_reduction.ipynb",
+    "title": "PCA and dimensionality reduction",
+    "runtime": "base",
+    "dataset": "Built-in 8\u00d78 handwritten digits"
+  },
+  {
+    "path": "notebooks/05_model_selection/01_tuning_and_model_persistence.ipynb",
+    "title": "Reproducible tuning and model persistence",
+    "runtime": "base",
+    "dataset": "Generated regression data"
+  }
+]

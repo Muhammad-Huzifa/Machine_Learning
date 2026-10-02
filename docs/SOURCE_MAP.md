@@ -15,3 +15,7 @@ The seven original learning notebooks are reorganized under `notebooks/01_machin
 The Adult Income project is copied from the reviewed combined collection into `projects/adult_income/`, with its package, deployment launchers, tests, reports, and data guide. Its original source repository is `ML-End-to-End-project`. Historical report figures remain labeled as historical and were not newly reproduced.
 
 Source repositories should be retired only after a mirror backup and a check for unmerged work, releases, issues, and deployment dependencies. File migration does not import every source repository's GitHub metadata.
+
+## Original additions — 2 October 2026
+
+Eight self-contained lessons were newly authored for this collection to fill the curriculum gaps; they are not recovered source files or copied variants. The [lesson manifest](NEW_LESSONS.json) lists their paths, titles, runtime, and inputs. Original notebooks and project implementations were preserved during this expansion.
