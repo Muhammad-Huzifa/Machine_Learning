@@ -1,40 +1,66 @@
-# Machine Learning: original notebooks
+# Machine Learning
 
-This repository retains the original learning notebooks. Their organized versions are available in the [Machine Learning and Deep Learning collection](https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow/tree/main), with topic indexes, separate framework environments, dataset instructions, and a migration source map.
+Classical machine-learning lessons and an end-to-end Adult Income classification project. This repository contains NumPy, pandas, and scikit-learn work; neural-network and YOLO material is maintained in the separate [Deep Learning collection](https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow).
 
-## Use the organized collection
+## Setup
 
-Clone the organized collection:
+Use Python 3.11 or 3.12:
 
 ```bash
-git clone https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow.git
-cd Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow
+git clone https://github.com/Muhammad-Huzifa/Machine_Learning.git
+cd Machine_Learning
 python -m venv .venv
 ```
 
-Activate the environment using `.venv\Scripts\activate.bat` in Windows Command Prompt, `.\.venv\Scripts\Activate.ps1` in PowerShell, `source .venv/Scripts/activate` in Git Bash, or `source .venv/bin/activate` on Linux/macOS.
+| Terminal | Activate the environment |
+| --- | --- |
+| Windows Command Prompt | `.venv\Scripts\activate.bat` |
+| Windows PowerShell | `.\.venv\Scripts\Activate.ps1` |
+| Windows Git Bash | `source .venv/Scripts/activate` |
+| Linux/macOS | `source .venv/bin/activate` |
 
 ```bash
-python -m pip install -r requirements/base.txt
+python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-TensorFlow/PyTorch lessons need the additional environment described in the collection README. The original notebooks here may refer to local datasets or machine-specific paths; use the migrated versions for the current organization.
+## Lesson order
 
-## Original notebook index
+| Order | Lesson |
+| --- | --- |
+| 1 | [01 simple linear regression](notebooks/01_machine_learning/01_simple_linear_regression.ipynb) |
+| 2 | [02 multiple linear regression](notebooks/01_machine_learning/02_multiple_linear_regression.ipynb) |
+| 3 | [03 polynomial regression](notebooks/01_machine_learning/03_polynomial_regression.ipynb) |
+| 4 | [04 logistic regression numpy](notebooks/01_machine_learning/04_logistic_regression_numpy.ipynb) |
+| 5 | [05 logistic regression patient records](notebooks/01_machine_learning/05_logistic_regression_patient_records.ipynb) |
+| 6 | [06 logistic regression titanic](notebooks/01_machine_learning/06_logistic_regression_titanic.ipynb) |
+| 7 | [07 support vector regression](notebooks/01_machine_learning/07_support_vector_regression.ipynb) |
 
-| Original notebook |
-| --- |
-| [Logistic Regression_from_Scratch](Logistic%20Regression_from_Scratch.ipynb) |
-| [Logistic-Regression_with-Real_DataSets](Logistic-Regression_with-Real_DataSets.ipynb) |
-| [Logistic_Regression_From_Scratch_With_Real_Data_Set](Logistic_Regression_From_Scratch_With_Real_Data_Set.ipynb) |
-| [Mutiple_Linear_Regression_from_Scratch](Mutiple_Linear_Regression_from_Scratch.ipynb) |
-| [Polynomial_Linear_Regression_With_Degree_2,3,4,5](Polynomial_Linear_Regression_With_Degree_2%2C3%2C4%2C5.ipynb) |
-| [Simple_Linear_Regression_With_Cost_Function_Gradient_Descent](Simple_Linear_Regression_With_Cost_Function_Gradient_Descent.ipynb) |
-| [Support_Vector_Regression](Support_Vector_Regression.ipynb) |
+Read [the dataset guide](docs/DATASETS.md) before opening a lesson. Salary and Titanic inputs are external; NumPy array lessons and the bundled patient CSV do not need those files.
 
-## Provenance
+## Adult Income project
 
-The consolidation keeps distinct implementations and records duplicate source cells. This source repository remains available during review; it has not been archived or deleted.
+```bash
+cd projects/adult_income
+python -m pip install -r requirements.txt
+python scripts/download_data.py --help
+python train.py --help
+python predict.py --help
+```
+
+The [project README](projects/adult_income/README.md) covers UCI data preparation, training, saved pipelines, prediction, and optional FastAPI/Streamlit applications. Use the separate optional requirements only when running those applications.
+
+## Structure
+
+| Path | Purpose |
+| --- | --- |
+| `notebooks/01_machine_learning/` | Seven classical ML lessons |
+| `projects/adult_income/` | Training, prediction, persistence, and optional serving |
+| `data/tabular/` | Source CSV and external-input instructions |
+| `requirements/` | Notebook environment |
+| `scripts/` | Offline notebook checks |
+| `docs/` | Inputs, development, and source provenance |
+
+Notebook syntax and the NumPy regression lessons were checked. Adult Income has five preprocessing/persistence checks and synthetic CLI validation; those checks do not establish a real Adult benchmark. External dataset runs and optional API/UI execution are not claimed. See [development notes](docs/DEVELOPMENT.md).
 
 Muhammad Huzifa — [GitHub](https://github.com/Muhammad-Huzifa)
