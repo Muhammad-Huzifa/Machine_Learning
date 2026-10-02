@@ -6,4 +6,4 @@ The current workflow normalizes input values, splits rows before fitting preproc
 
 Run `train.py` to produce metrics for the current implementation. Record the data source, train/test row counts, seed, estimator, command, and package versions. Do not use synthetic test-fixture results as Adult benchmark scores.
 
-The original numbered exploration scripts remain accessible through [the previous source commit](https://github.com/Muhammad-Huzifa/ML-End-to-End-project/tree/7b1eb1993b9ed1f3d8b7de4f14f041fedea1fe64/scripts). Current supported commands are `train.py` and `predict.py`.
+The original numbered exploration scripts came from `ML-End-to-End-project`, source commit `7b1eb1993b9ed1f3d8b7de4f14f041fedea1fe64`. That duplicate repository has been retired; its history is in the verified source backup supplied to the owner. Current supported commands are `train.py` and `predict.py`.

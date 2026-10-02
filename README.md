@@ -1,14 +1,26 @@
 # Machine Learning
 
-Classical machine-learning lessons and an end-to-end Adult Income classification project. This repository contains NumPy, pandas, and scikit-learn work; neural-network and YOLO material is maintained in the separate [Deep Learning collection](https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow).
+A collection of 15 classical ML notebooks and an end-to-end Adult Income classification project. Learn regression, preprocessing, evaluation, classical classifiers, clustering, PCA, tuning, and persistence. Neural networks and detection lessons live in the separate [Deep Learning collection](https://github.com/Muhammad-Huzifa/deep-learning).
+
+## Learning path
+
+| Section | Lessons | Topics |
+| --- | --- | --- |
+| [Foundations](notebooks/01_machine_learning/README.md) | 7 | Linear/polynomial/logistic regression and SVR |
+| [Modeling workflow](notebooks/02_modeling_workflow/README.md) | 2 | Pipelines, missing values, encoding, metrics, cross-validation |
+| [Classical classifiers](notebooks/03_classical_models/README.md) | 3 | KNN, SVM, trees, ensembles, TF-IDF and Naive Bayes |
+| [Unsupervised learning](notebooks/04_unsupervised_learning/README.md) | 2 | K-means, DBSCAN, PCA |
+| [Model selection](notebooks/05_model_selection/README.md) | 1 | Hyperparameter search and pipeline persistence |
+
+New to ML? Start with the regression foundations, then follow the modeling workflow before comparing models. For a path that needs no external dataset files, use the [eight self-contained lessons in the notebook catalog](notebooks/README.md). Each includes objectives, explanations, examples, and practice.
 
 ## Setup
 
 Use Python 3.11 or 3.12:
 
 ```bash
-git clone https://github.com/Muhammad-Huzifa/Machine_Learning.git
-cd Machine_Learning
+git clone https://github.com/Muhammad-Huzifa/machine-learning.git
+cd machine-learning
 python -m venv .venv
 ```
 
@@ -24,19 +36,7 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-## Lesson order
-
-| Order | Lesson |
-| --- | --- |
-| 1 | [01 simple linear regression](notebooks/01_machine_learning/01_simple_linear_regression.ipynb) |
-| 2 | [02 multiple linear regression](notebooks/01_machine_learning/02_multiple_linear_regression.ipynb) |
-| 3 | [03 polynomial regression](notebooks/01_machine_learning/03_polynomial_regression.ipynb) |
-| 4 | [04 logistic regression numpy](notebooks/01_machine_learning/04_logistic_regression_numpy.ipynb) |
-| 5 | [05 logistic regression patient records](notebooks/01_machine_learning/05_logistic_regression_patient_records.ipynb) |
-| 6 | [06 logistic regression titanic](notebooks/01_machine_learning/06_logistic_regression_titanic.ipynb) |
-| 7 | [07 support vector regression](notebooks/01_machine_learning/07_support_vector_regression.ipynb) |
-
-Read [the dataset guide](docs/DATASETS.md) before opening a lesson. Salary and Titanic inputs are external; NumPy array lessons and the bundled patient CSV do not need those files.
+Select the environment's Python kernel, restart it, and run the chosen notebook from top to bottom. The eight new lessons use small generated, handcrafted, or built-in datasets; after dependency installation, they need no download or GPU. Read [the dataset guide](docs/DATASETS.md) for the original salary, Titanic, patient-record, and Adult inputs.
 
 ## Adult Income project
 
@@ -48,19 +48,29 @@ python train.py --help
 python predict.py --help
 ```
 
-The [project README](projects/adult_income/README.md) covers UCI data preparation, training, saved pipelines, prediction, and optional FastAPI/Streamlit applications. Use the separate optional requirements only when running those applications.
+The [project README](projects/adult_income/README.md) covers UCI data preparation, training, saved pipelines, prediction, and optional FastAPI/Streamlit applications. Install the optional requirements when running those applications.
 
 ## Structure
 
 | Path | Purpose |
 | --- | --- |
-| `notebooks/01_machine_learning/` | Seven classical ML lessons |
-| `projects/adult_income/` | Training, prediction, persistence, and optional serving |
-| `data/tabular/` | Source CSV and external-input instructions |
-| `requirements/` | Notebook environment |
-| `scripts/` | Offline notebook checks |
-| `docs/` | Inputs, development, and source provenance |
+| `notebooks/01_machine_learning/` | Seven preserved foundation lessons |
+| `notebooks/02_modeling_workflow/` | Preprocessing and evaluation |
+| `notebooks/03_classical_models/` | Classical and text classifiers |
+| `notebooks/04_unsupervised_learning/` | Clustering and PCA |
+| `notebooks/05_model_selection/` | Tuning and persistence |
+| `projects/adult_income/` | Training, prediction, and optional serving |
+| `data/`, `artifacts/` | Input guides and ignored local outputs |
+| `requirements/`, `scripts/`, `docs/` | Environments, checks, and provenance |
 
-Notebook syntax and the NumPy regression lessons were checked. Adult Income has five preprocessing/persistence checks and synthetic CLI validation; those checks do not establish a real Adult benchmark. External dataset runs and optional API/UI execution are not claimed. See [development notes](docs/DEVELOPMENT.md).
+## Validation
+
+```bash
+python -m pip install -r requirements/validation.txt
+python scripts/check_notebooks.py
+python scripts/execute_lessons.py
+```
+
+The execution command runs the eight new lessons in fresh kernels without writing outputs into source notebooks. GitHub Actions runs this command and the five existing Adult Income tests. All 26 new lesson code cells passed local CPU execution; the original seven notebooks are preserved. These educational runs do not establish a real Adult benchmark or validate the optional API/UI. See [development notes](docs/DEVELOPMENT.md) and [source provenance](docs/SOURCE_MAP.md).
 
 Muhammad Huzifa — [GitHub](https://github.com/Muhammad-Huzifa)

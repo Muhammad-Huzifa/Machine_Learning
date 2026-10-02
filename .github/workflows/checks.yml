@@ -20,3 +20,15 @@ jobs:
       - name: Check preprocessing and persisted predictions
         working-directory: projects/adult_income
         run: python -m unittest discover -s tests -v
+  cpu-lessons:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.11'
+      - name: Install self-contained lesson dependencies
+        run: python -m pip install -r requirements/validation.txt
+      - name: Execute eight lessons in fresh kernels
+        run: python scripts/execute_lessons.py
