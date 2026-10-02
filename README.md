@@ -1,13 +1,13 @@
 # Machine Learning: original notebooks
 
-This repository retains the original learning notebooks. Their organized versions are available in the [Machine Learning and Deep Learning collection](https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow/tree/codex/consolidate-ml-deep-learning), with topic indexes, separate framework environments, dataset instructions, and a migration source map.
+This repository retains the original learning notebooks. Their organized versions are available in the [Machine Learning and Deep Learning collection](https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow/tree/main), with topic indexes, separate framework environments, dataset instructions, and a migration source map.
 
 ## Use the organized collection
 
-While the consolidation pull request is under review, clone its branch:
+Clone the organized collection:
 
 ```bash
-git clone --branch codex/consolidate-ml-deep-learning https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow.git
+git clone https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow.git
 cd Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow
 python -m venv .venv
 ```
