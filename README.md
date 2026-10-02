@@ -1,31 +1,40 @@
-# 🧠 Machine Learning Repository
+# Machine Learning: original notebooks
 
-## 📘 Overview
-This repository contains a collection of **Machine Learning algorithms** implemented from scratch and using real datasets.  
-Each notebook demonstrates fundamental ML concepts, mathematical intuition, and implementation details step-by-step.
+This repository retains the original learning notebooks. Their organized versions are available in the [Machine Learning and Deep Learning collection](https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow/tree/main), with topic indexes, separate framework environments, dataset instructions, and a migration source map.
 
----
+## Use the organized collection
 
-## 📂 Project Structure
-Although all notebooks are stored in the root directory, they can be grouped conceptually as follows:
+Clone the organized collection:
 
-```plaintext
-Machine-Learning/
-│
-├── 🧩 Linear Regression
-│   ├── Simple_Linear_Regression_With_Cost_Function_Gradient_Descent.ipynb
-│   ├── Mutiple_Linear_Regression_from_Scratch.ipynb
-│   └── Polynomial_Linear_Regression_With_Degree_2,3,4,5.ipynb
-│
-├── 🔁 Logistic Regression
-│   ├── Logistic Regression_from_Scratch.ipynb
-│   ├── Logistic_Regression_From_Scratch_With_Real_Data_Set.ipynb
-│   └── Logistic-Regression_with-Real_DataSets.ipynb
-│
-├── 🧮 Support Vector Machines
-│   └── Support_Vector_Regression.ipynb
-│
-├── 📊 Dataset Files
-│   └── Records of Pateint.csv
-│
-└── README.md
+```bash
+git clone https://github.com/Muhammad-Huzifa/Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow.git
+cd Neural-Networks-and-Deep-Learning-Using-Pytorch-and-Tensor-Flow
+python -m venv .venv
+```
+
+Activate the environment using `.venv\Scripts\activate.bat` in Windows Command Prompt, `.\.venv\Scripts\Activate.ps1` in PowerShell, `source .venv/Scripts/activate` in Git Bash, or `source .venv/bin/activate` on Linux/macOS.
+
+```bash
+python -m pip install -r requirements/base.txt
+jupyter lab
+```
+
+TensorFlow/PyTorch lessons need the additional environment described in the collection README. The original notebooks here may refer to local datasets or machine-specific paths; use the migrated versions for the current organization.
+
+## Original notebook index
+
+| Original notebook |
+| --- |
+| [Logistic Regression_from_Scratch](Logistic%20Regression_from_Scratch.ipynb) |
+| [Logistic-Regression_with-Real_DataSets](Logistic-Regression_with-Real_DataSets.ipynb) |
+| [Logistic_Regression_From_Scratch_With_Real_Data_Set](Logistic_Regression_From_Scratch_With_Real_Data_Set.ipynb) |
+| [Mutiple_Linear_Regression_from_Scratch](Mutiple_Linear_Regression_from_Scratch.ipynb) |
+| [Polynomial_Linear_Regression_With_Degree_2,3,4,5](Polynomial_Linear_Regression_With_Degree_2%2C3%2C4%2C5.ipynb) |
+| [Simple_Linear_Regression_With_Cost_Function_Gradient_Descent](Simple_Linear_Regression_With_Cost_Function_Gradient_Descent.ipynb) |
+| [Support_Vector_Regression](Support_Vector_Regression.ipynb) |
+
+## Provenance
+
+The consolidation keeps distinct implementations and records duplicate source cells. This source repository remains available during review; it has not been archived or deleted.
+
+Muhammad Huzifa — [GitHub](https://github.com/Muhammad-Huzifa)
